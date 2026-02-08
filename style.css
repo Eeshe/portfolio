@@ -275,9 +275,13 @@ body.is-transitioning .transition-overlay {
 }
 
 .detail-title {
-    font-size: clamp(2.5rem, 8vw, 5rem);
+    font-size: clamp(2rem, 10vw, 5rem);
     font-weight: 800;
     margin-bottom: 0.5rem;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+    line-height: 1.1;
 }
 
 .detail-subtitle {
@@ -511,8 +515,8 @@ body.is-transitioning .transition-overlay {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    /* Change to space-between for split layout */
-    align-items: center;
+    align-items: flex-start;
+    /* Align labels at the top */
 }
 
 .prev-project,
@@ -541,6 +545,8 @@ body.is-transitioning .transition-overlay {
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 1px;
+    white-space: nowrap;
+    /* Prevent labels from wrapping */
 }
 
 .prev-title,
@@ -733,7 +739,7 @@ body.is-transitioning .transition-overlay {
     }
 
     .detail-title {
-        font-size: 3rem;
+        font-size: clamp(1.8rem, 12vw, 3rem);
     }
 }
 
