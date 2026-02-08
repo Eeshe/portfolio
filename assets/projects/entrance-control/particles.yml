@@ -1,0 +1,11 @@
+entrance_outline:
+  particle: REDSTONE
+  enable: true
+  amount: 1
+  x-off-set: 0.0
+  y-off-set: 0.0
+  z-off-set: 0.0
+  extra: 0.0
+  data:
+    color: 16711680
+    size: 0.3

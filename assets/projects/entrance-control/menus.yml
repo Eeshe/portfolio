@@ -1,0 +1,162 @@
+# Use size 0 on a menu size to make it an adaptive menu. Using only the necessary slots to display its contents.
+# Using -1 on the frame slots setting will automatically place frame items in the outer border of the menu.
+# Using -1 on the filler slots setting will automatically fill all empty slots of the menu.
+
+entrance-selection-manager:
+  size: 0
+  title: Entrance Selection Manager
+  frame: BLUE_STAINED_GLASS_PANE
+  frame-slots:
+  - -1
+  filler: BLACK_STAINED_GLASS_PANE
+  filler-slots:
+  - -1
+  entrance-selection-item:
+    lore:
+    - '&3Entrances: &l%selected_entrances%/%maximum_selected_entrances%'
+    name: '&7%display_name%'
+    item: OAK_DOOR
+  previous-page-item:
+    slot: -9
+    item:
+      material: ARROW
+      amount: 1
+      name: §7Previous Page
+      lore:
+      - §7Click to go to the previous page.
+  next-page-item:
+    slot: -1
+    item:
+      material: ARROW
+      amount: 1
+      name: §7Next Page
+      lore:
+      - §7Click to go to the next page.
+entrance-selection-settings:
+  size: 27
+  title: '%display_name%''s Settings'
+  frame: BLUE_STAINED_GLASS_PANE
+  frame-slots:
+  - -1
+  filler: BLACK_STAINED_GLASS_PANE
+  filler-slots:
+  - -1
+  break-protection-status:
+    'false': '&cDisabled'
+    'true': '&aEnabled'
+  lock-status:
+    'false': '&cDisabled'
+    'true': '&aEnabled'
+  entrance-sync-status:
+    'false': '&cDisabled'
+    'true': '&aEnabled'
+  back-item:
+    slot: 1
+    item:
+      material: RED_STAINED_GLASS_PANE
+      amount: 1
+      name: §cBack
+  menu-items:
+    name:
+      slot: 11
+      item:
+        material: NAME_TAG
+        amount: 1
+        name: §eName
+        lore:
+        - §f%display_name%
+        - §7Click here to change the name of the entrance selection.
+    entrance-sync:
+      slot: 12
+      item:
+        material: OBSERVER
+        amount: 1
+        name: §eEntrance Sync
+        lore:
+        - '%entrance_sync%'
+        - §7Click here to enable or disable entrance syncing.
+    lock:
+      slot: 13
+      item:
+        material: IRON_DOOR
+        amount: 1
+        name: §eLock
+        lore:
+        - '%lock%'
+        - §7Click here to enable or disable entrance locking.
+    break-protection:
+      slot: 14
+      item:
+        material: GOLDEN_PICKAXE
+        amount: 1
+        name: §eBreak Protection
+        lore:
+        - '%break_protection%'
+        - §7Click here to enable or disable break protection.
+    members:
+      slot: 15
+      item:
+        material: PLAYER_HEAD
+        amount: 1
+        name: §eMembers
+        lore:
+        - §7Click here to manage members.
+    edit-selection:
+      slot: 16
+      item:
+        material: WRITABLE_BOOK
+        amount: 1
+        name: §eEdit Selection
+        lore:
+        - §7Click here to edit the selected entrances
+    delete:
+      slot: -5
+      item:
+        material: BARRIER
+        amount: 1
+        name: §cDelete
+entrance-selection-members:
+  size: 0
+  title: '%display_name%''s Members'
+  frame: BLUE_STAINED_GLASS_PANE
+  frame-slots:
+  - -1
+  filler: BLACK_STAINED_GLASS_PANE
+  filler-slots:
+  - -1
+  member-item:
+    lore:
+    - '&7Left click to transfer ownership of selection to player.'
+    - '&7Right click to remove player from selection.'
+    name: '&7%player_name%'
+  previous-page-item:
+    slot: -9
+    item:
+      material: ARROW
+      amount: 1
+      name: §7Previous Page
+      lore:
+      - §7Click to go to the previous page.
+  next-page-item:
+    slot: -1
+    item:
+      material: ARROW
+      amount: 1
+      name: §7Next Page
+      lore:
+      - §7Click to go to the next page.
+  back-item:
+    slot: 1
+    item:
+      material: RED_STAINED_GLASS_PANE
+      amount: 1
+      name: §cBack
+  menu-items:
+    add-member:
+      slot: -5
+      item:
+        material: PLAYER_HEAD
+        amount: 1
+        name: §eAdd Member
+        lore:
+        - §7Click here to add a member.

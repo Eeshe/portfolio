@@ -1,0 +1,77 @@
+operation-cancelled: '&cOperation cancelled.'
+blacklisted-world: '&cEntranceControl can''t be used in this world.'
+blacklisted-region: '&cEntranceControl can''t be used in this region.'
+help-command-info: Displays this list.
+help-command-usage: /entrancecontrol help
+reload-command-info: Reloads the plugin's configuration file.
+reload-command-usage: /entrancecontrol reload
+lock-command-info: Starts an entrance selection creation session.
+lock-command-usage: /entrancecontrol lock <SelectionID>
+selection-limit-reached: '&cYou can''t create any more entrance selections.'
+already-used-id: '&cYou are already using ID &l%id% in your entrance selections.'
+entrance-selection-name-instructions: |-
+  &eEnter the new name of the entrance selection as a chat message.
+  &eEnter &ocancel&e to cancel the operation.
+entrance-selection-name-input-cancel: '&cCancelled name change.'
+entrance-selection-instructions: |-
+  &eRight click to add entrances to the selection.
+  &eLeft click to remove entrances from the selection.
+  &eSneak to end the selection.
+selected-entrances-action-bar: '&7Selected entrances: &l%selected_entrances%/%maximum_entrances%'
+entrance-selection-end-confirmation: '&eSneak again to end the entrance selection.'
+no-selected-entrances: '&cYou didn''t select any entrances.'
+exceeded-selection-amount: '&cYou can''t select any more entrances in this selection.'
+exceeded-selection-distance: '&cYour selection exceeds your maximum selection distance
+  &l(%maximum_distance%)&c.'
+entrance-selection-end: '&aEnded entrance selection.'
+manager-command-info: Opens the entrance control manager menu.
+manager-command-usage: /entrancecontrol manager
+open-command-info: Opens all the entrances from the specified selection.
+open-command-usage: /entrancecontrol open <SelectionID
+entrance-selection-not-found: '&cEntrance selection &l%name%&c not found.'
+open-command-success: '&aSuccessfully opened all entrances from &l%name%&a.'
+close-command-info: Closes all the entrances from the specified selection.
+close-command-usage: /entrancecontrol close <SelectionID
+close-command-success: '&aSuccessfully closed all entrances from &l%name%&a.'
+identify-command-info: Shows information about the clicked entrances.
+identify-command-usage: /entrancecontrol identify
+identify-command-start: '&aRight click the entrance you wish to identify.'
+identify-command-stop: '&cYou are no longer identifying entrances.'
+not-entrance-selection: '&cThis entrance is not locked'
+entrance-identify: '&eThis entrance is part of selection &l%selection_name%&e owned
+  by &l%selection_owner%&e.'
+delete-command-info: Deletes the specified selection from the indicated player.
+delete-command-usage: /entrancecontrol delete <Player> <SelectionID>
+delete-command-success-sender: '&aSuccessfully deleted &l%target%''s&a entrance selection
+  &l%selection_name%&a.'
+delete-command-success-target: '&cYour entrance selection &l%selection_name%&c has
+  been deleted.'
+already-selected-entrance: '&cThis entrance is already protected by a selection.'
+no-entrance-access: '&cYou don''t have access to this entrance.'
+protected-entrance-break: '&cThis entrance is protected.'
+entrance-selection-add-member-instructions: |-
+  &eEnter the name of the player you wish to add to the selection as a chat message.
+  &eEnter &ocancel&e to cancel the operation.
+entrance-selection-add-member-cancel: '&cCancelled member add.'
+already-member: '&c&l%target%&c is already a member of this entrance selection.'
+entrance-selection-add-member-success-self: '&aSuccessfully added &l%target%&a to
+  &l%display_name%&a''s entrance selection.'
+entrance-selection-add-member-success-target: '&a&l%owner%&a added you to &l%display_name%&a''s
+  entrance selection.'
+exceeded-selection-limit-target: '&c&l%target%&c has already reached the entrance
+  selection limit.'
+player-not-online: '&c&l%target%&c isn''t online.'
+entrance-selection-transfer-confirmation: '&eClick again to confirm the ownership
+  transfer.'
+entrance-selection-transfer-success-self: '&aSuccessfully transferred &l%display_name%&a''s
+  ownership to &l%target%&a.'
+entrance-selection-transfer-success-target: '&aEntrance selection &l%display_name%''s&a
+  ownership has been transferred to you.'
+entrance-selection-remove-member-confirmation: '&eClick again to confirm the removal
+  of the player from your selection.'
+entrance-selection-remove-member-success-self: '&aSuccessfully removed &l%target%&a
+  from &l%display_name%&a.'
+entrance-selection-remove-member-success-target: '&cYou''ve been removed from entrance
+  selection &l%display_name%''s&c.'
+entrance-selection-delete-confirmation: '&cClick again to confirm the deletion of
+  the entrance selection.'

@@ -1,0 +1,22 @@
+item-found-outline:
+  particle: DUST
+  enable: true
+  amount: 0
+  x-off-set: 0.0
+  y-off-set: 0.0
+  z-off-set: 0.0
+  extra: 0.01
+  data:
+    color: 65535
+    size: 0.5
+item-found-trail:
+  particle: DUST
+  enable: true
+  amount: 0
+  x-off-set: 0.0
+  y-off-set: 0.0
+  z-off-set: 0.0
+  extra: 0.01
+  data:
+    color: 65535
+    size: 0.5

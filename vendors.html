@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendors | William Morales</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="project-detail-page">
+    <div class="transition-overlay"></div>
+
+    <nav class="detail-nav">
+        <a href="index.html" class="back-link">
+            <span class="bracket-small">&lt;</span> Back to Home
+        </a>
+    </nav>
+
+    <main class="detail-container">
+        <header class="detail-header">
+            <div class="detail-title-group">
+                <h1 class="detail-title"><span class="accent-text">Vendors</span></h1>
+                <p class="detail-subtitle">Immersive Villager Admin Shops</p>
+            </div>
+        </header>
+
+        <section class="detail-showcase">
+            <div class="gallery-item main-showcase lightbox-trigger">
+                <img src="assets/projects/vendors/cover.png" alt="Vendors Cover">
+            </div>
+        </section>
+
+        <section class="detail-section">
+            <h2 class="section-label">Overview</h2>
+            <p class="description-text">Vendors is a plugin designed for server administrators, enabling the creation of fully customizable NPC-based shops where players can sell items. Each vendor can be tailored to fit specific themes or categories, providing staff with limitless possibilities for modular shop designs.</p>
+            <br>
+            <p class="description-text">The plugin integrates with <b>Vault</b> and any
+          economy plugin to manage the currency obtained from selling items to
+          the vendors.</p>
+        </section>
+
+        <section class="detail-section">
+            <div class="media-carousel">
+                <div class="carousel-container">
+                    <div class="carousel-track">
+                        <div class="carousel-slide">
+                            <video src="assets/projects/vendors/showcase.mp4" title="Showcase" muted loop
+                                playsinline></video>
+                        </div>
+                        <div class="carousel-slide">
+                            <video src="assets/projects/vendors/setup.mp4" title="Setup" muted loop playsinline></video>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/projects/vendors/client_voucher.png" alt="Client Voucher">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/projects/vendors/client_profile.png" alt="Client Profile">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-nav">
+                    <button class="carousel-btn prev" aria-label="Previous slide">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+                    <button class="carousel-btn next" aria-label="Next slide">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+                <div class="carousel-indicators"></div>
+            </div>
+        </section>
+        
+        <section class="detail-section config-section">
+            <h2 class="section-label">Configuration</h2>
+            <div class="config-container">
+                <div class="config-tabs">
+                    <div class="config-tab active" data-url="assets/projects/vendors/config.yml">config.yml</div>
+                </div>
+                <div class="config-content">
+                    <div class="code-wrapper">
+                        <pre class="code-block"></pre>
+                        <div class="code-overlay"></div>
+                    </div>
+                    <button class="expand-button">
+                        <span>Expand Configuration</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="detail-footer">
+        <a href="entrance-control.html" class="next-project">
+            <span class="next-label">Next Project</span>
+            <span class="next-title">EntranceControl <span class="bracket-small">&gt;</span></span>
+        </a>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

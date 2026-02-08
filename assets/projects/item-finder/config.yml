@@ -1,0 +1,19 @@
+# Items that can't be searched.
+item-blacklist:
+- ENCHANTED_GOLDEN_APPLE
+# Worlds where items can't be searched.
+world-blacklist:
+- world_the_end
+# WorldGuard regions where items can't be searched.
+region-blacklist:
+- region1
+- region2
+# Radius (in blocks) around the player where items will be searched.
+search-radius: 10
+# Amount of chunks that will be searched for items per tick.
+# The higher the amount the fastest the search and the highest the impact on the server.
+searched-chunks-per-tick: 15
+# Amount of times the item found particles will be shown on containers with the searched item.
+item-found-effects-iterations: 5
+# Time (in seconds) between each item search.
+search-cooldown: 5

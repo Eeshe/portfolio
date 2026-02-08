@@ -1,0 +1,10 @@
+searching:
+  sound: BLOCK_SCULK_SENSOR_CLICKING
+  enable: true
+  volume: 0.6
+  pitch: 0.8
+item-found:
+  sound: BLOCK_AMETHYST_BLOCK_CHIME
+  enable: true
+  volume: 1.3
+  pitch: 1.0

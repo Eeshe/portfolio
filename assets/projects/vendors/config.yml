@@ -1,0 +1,170 @@
+# All setting relating markets, everything divided by each market type.
+market-settings:
+  COLLECTOR:
+    creation-cost: 100
+    villager-type: PLAINS
+    villager-profession: NONE
+    # Amount of items sold with left click.
+    left-click: 1
+    # Amount of items sold with right click.
+    right-click: 8
+    trades:
+      BONE_BLOCK: 100
+
+  TRAPPER:
+    creation-cost: 100
+    villager-type: PLAINS
+    villager-profession: NONE
+    # Amount of items sold with left click.
+    left-click: 1
+    # Amount of items sold with right click.
+    right-click: 8
+    trades:
+      LEATHER: 20
+
+  FISHERMAN:
+    creation-cost: 100
+    villager-type: PLAINS
+    villager-profession: NONE
+    # Amount of items sold with left click.
+    left-click: 1
+    # Amount of items sold with right click.
+    right-click: 8
+    trades:
+      ICE: 60
+
+  HELL_BLASTER:
+    creation-cost: 100
+    villager-type: PLAINS
+    villager-profession: NONE
+    # Amount of items sold with left click.
+    left-click: 1
+    # Amount of items sold with right click.
+    right-click: 8
+    trades:
+      OBSIDIAN: 80
+
+  TAVERN:
+    creation-cost: 100
+    villager-type: PLAINS
+    villager-profession: NONE
+    # Amount of items sold with left click.
+    left-click: 1
+    # Amount of items sold with right click.
+    right-click: 8
+    trades:
+      NETHER_WART: 100
+
+  TINKERER:
+    creation-cost: 100
+    villager-type: PLAINS
+    villager-profession: NONE
+    # Amount of items sold with left click.
+    left-click: 1
+    # Amount of items sold with right click.
+    right-click: 8
+    trades:
+      REDSTONE_DUST: 10
+
+  CARPENTER:
+    creation-cost: 100
+    villager-type: PLAINS
+    villager-profession: NONE
+    # Amount of items sold with left click.
+    left-click: 1
+    # Amount of items sold with right click.
+    right-click: 8
+    trades:
+      BAMBOO: 20
+
+  END_RUNNER:
+    creation-cost: 100
+    villager-type: PLAINS
+    villager-profession: NONE
+    # Amount of items sold with left click.
+    left-click: 1
+    # Amount of items sold with right click.
+    right-click: 8
+    trades:
+      ENDER_PEARL: 100
+
+  FLORIST:
+    creation-cost: 100
+    villager-type: PLAINS
+    villager-profession: NONE
+    # Amount of items sold with left click.
+    left-click: 1
+    # Amount of items sold with right click.
+    right-click: 8
+    trades:
+      GRASS: 5
+
+  LANDSCAPIST:
+    creation-cost: 100
+    villager-type: PLAINS
+    villager-profession: NONE
+    # Amount of items sold with left click.
+    left-click: 1
+    # Amount of items sold with right click.
+    right-click: 8
+    trades:
+      SAND: 10
+
+  GROCER:
+    creation-cost: 100
+    villager-type: PLAINS
+    villager-profession: NONE
+    # Amount of items sold with left click.
+    left-click: 1
+    # Amount of items sold with right click.
+    right-click: 8
+    trades:
+      BREAD: 30
+
+  FARMER:
+    creation-cost: 100
+    villager-type: PLAINS
+    villager-profession: NONE
+    # Amount of items sold with left click.
+    left-click: 1
+    # Amount of items sold with right click.
+    right-click: 8
+    trades:
+      SUGAR_CANE: 20
+
+  SALVAGER:
+    creation-cost: 100
+    villager-type: PLAINS
+    villager-profession: NONE
+    # Amount of items sold with left click.
+    left-click: 1
+    # Amount of items sold with right click.
+    right-click: 8
+    trades:
+      CHAINMAIL_HELMET: 150
+
+  MINER:
+    creation-cost: 100
+    villager-type: PLAINS
+    villager-profession: NONE
+    # Amount of items sold with left click.
+    left-click: 1
+    # Amount of items sold with right click.
+    right-click: 8
+    trades:
+      COBBLESTONE: 5
+
+  METALSMITH:
+    creation-cost: 100
+    villager-type: PLAINS
+    villager-profession: NONE
+    # Amount of items sold with left click.
+    left-click: 1
+    # Amount of items sold with right click.
+    right-click: 8
+    trades:
+      IRON_INGOT: 20
+
+# Villager Types: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/Villager.Type.html
+# Villager Professions: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/Villager.Profession.html
+# Items: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html

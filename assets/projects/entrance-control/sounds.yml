@@ -1,0 +1,75 @@
+selection-add:
+  sound: UI_BUTTON_CLICK
+  enable: true
+  volume: 1.0
+  pitch: 1.2
+selection-remove:
+  sound: UI_BUTTON_CLICK
+  enable: true
+  volume: 1.0
+  pitch: 0.8
+selection-open:
+  sound: BLOCK_IRON_DOOR_OPEN
+  enable: true
+  volume: 1.0
+  pitch: 1.0
+selection-close:
+  sound: BLOCK_IRON_DOOR_CLOSE
+  enable: true
+  volume: 1.0
+  pitch: 1.0
+entrance-selection-manager-menu-open:
+  sound: UI_BUTTON_CLICK
+  enable: true
+  volume: 1.0
+  pitch: 0.8
+entrance-selection-settings-menu-open:
+  sound: UI_BUTTON_CLICK
+  enable: true
+  volume: 1.0
+  pitch: 0.8
+entrance-selection-members-menu-open:
+  sound: UI_BUTTON_CLICK
+  enable: true
+  volume: 1.0
+  pitch: 0.8
+entrance-sync-on:
+  sound: UI_BUTTON_CLICK
+  enable: true
+  volume: 1.0
+  pitch: 1.5
+entrance-sync-off:
+  sound: UI_BUTTON_CLICK
+  enable: true
+  volume: 1.0
+  pitch: 0.5
+break-protection-on:
+  sound: UI_BUTTON_CLICK
+  enable: true
+  volume: 1.0
+  pitch: 1.5
+break-protection-off:
+  sound: UI_BUTTON_CLICK
+  enable: true
+  volume: 1.0
+  pitch: 0.5
+lock-on:
+  sound: UI_BUTTON_CLICK
+  enable: true
+  volume: 1.0
+  pitch: 1.5
+lock-off:
+  sound: UI_BUTTON_CLICK
+  enable: true
+  volume: 1.0
+  pitch: 0.5
+entrance-selection-delete:
+  sound: BLOCK_GRAVEL_BREAK
+  enable: true
+  volume: 1.0
+  pitch: 1.3
+entrance-identify:
+  sound: BLOCK_ENCHANTMENT_TABLE_USE
+  enable: true
+  volume: 1.0
+  pitch: 1.2

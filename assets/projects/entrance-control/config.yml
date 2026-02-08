@@ -1,0 +1,27 @@
+# Worlds where EntranceControl won't handle events in.
+world-blacklist:
+- world_the_end
+# WorldGuard regions where EntranceControl won't handle events in.
+region-blacklist:
+- region1
+- region2
+# Permission that will be checked when computing the total amount of entrance selections a player can have.
+# Ex. 'entrancecontrol.maximum_entrance_selections.' will allow a player that has the permission 'entrancecontrol.maximum_entrance_selections.10' to have 10 entrance selections.
+# The default amount will be used if the player doesn't have the configured permission.
+maximum-entrance-selection-amount:
+  permission: entrancecontrol.maximum_entrance_selections.
+  default: 10
+# Permission that will be checked when computing the total amount of entrance a player can select within an entrance selection.
+# Ex. 'entrancecontrol.maximum_selected_entrances.' will allow a player that has the permission 'entrancecontrol.maximum_selected_entrances.10' to select 10 entrances in their selection.
+# The default amount will be used if the player doesn't have the configured permission.
+maximum-selected-entrances:
+  permission: entrancecontrol.maximum_selected_entrances.
+  default: 20
+# Permission that will be checked when computing the total distance an entrance selection can have between their entrances.
+# Ex. 'entrancecontrol.maximum_selection_distance.' will allow a player that has the permission 'entrancecontrol.maximum_selection_distance.10' to have a total distance of 10 blocks between the entrances in their selection.
+# The default amount will be used if the player doesn't have the configured permission.
+maximum-selection-distance:
+  permission: entrancecontrol.maximum_selection_distance.
+  default: 20
+# Whether break protection will be handled by the plugin.
+break-protection: true

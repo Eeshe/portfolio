@@ -1,0 +1,8 @@
+search-command-info: Searches the specified item in the containers near you.
+search-command-usage: /itemfinder search <Item>
+blacklisted-item: '&cYou can''t search for &l%item%&c.'
+blacklisted-world: '&cYou can''t search items in this world.'
+blacklisted-region: '&cYou can''t search items in this area.'
+search-cooldown: '&cSearch cooldown: &l%cooldown%&c.'
+searching-action-bar: '&7Searching for &l%item%&7...'
+no-items-found: '&cNo items found'
