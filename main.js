@@ -238,15 +238,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnText = expandBtn?.querySelector('span');
 
     const highlightYAML = (text) => {
-        return text
+        // Escape HTML
+        let escaped = text
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;');
+
+        return escaped
             .replace(/#.*$/gm, '<span class="yaml-com">$&</span>') // Comments
             .replace(/^(\s*[\w-]+:)/gm, '<span class="yaml-key">$&</span>') // Keys
             .replace(/:\s*(true|false|yes|no)\b/gi, ': <span class="yaml-bool">$1</span>') // Bools
             .replace(/:\s*(\d+)\b/g, ': <span class="yaml-num">$1</span>') // Numbers
-            .replace(/:\s*(.+)$/gm, (match, p1) => {
-                if (p1.trim().startsWith('<span')) return match; // Already highlighted
-                return ': <span class="yaml-val">' + p1 + '</span>';
-            });
+            .replace(/:\s*(?!<span)([^<#\n]+)/g, ': <span class="yaml-val">$1</span>'); // Remaining values (Strings/Enums)
     };
 
     const loadConfig = async (url) => {

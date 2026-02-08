@@ -549,6 +549,7 @@ body.is-transitioning .transition-overlay {
     font-weight: 600;
     color: var(--text-primary);
     transition: color var(--transition-speed) ease;
+    white-space: nowrap;
 }
 
 .prev-project:hover .prev-title,
@@ -955,19 +956,20 @@ video.lightbox-media {
 /* YAML Highlighting */
 .yaml-key {
     color: var(--accent-color);
+    font-weight: 600;
 }
 
 .yaml-val {
-    color: #ce9178;
+    color: #9cdcfe;
 }
 
 .yaml-com {
-    color: #6a9955;
+    color: #808080;
     font-style: italic;
 }
 
 .yaml-num {
-    color: #b5cea8;
+    color: #dcdcaa;
 }
 
 .yaml-bool {
