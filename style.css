@@ -208,6 +208,7 @@ body.is-transitioning .transition-overlay {
     font-size: 1.1rem;
     line-height: 1.6;
     font-family: 'JetBrains Mono', monospace;
+    text-align: justify;
 }
 
 .project-item:hover .project-media img {
@@ -252,10 +253,12 @@ body.is-transitioning .transition-overlay {
 }
 
 .detail-container {
+    width: 100%;
     max-width: 1000px;
     margin: 0 auto;
-    padding: 0 2rem 0 2rem;
+    padding: 0 2rem;
     animation: slideInUp 0.8s ease-out;
+    box-sizing: border-box;
 }
 
 .detail-header {
@@ -497,6 +500,7 @@ body.is-transitioning .transition-overlay {
     line-height: 1.8;
     color: var(--text-secondary);
     max-width: 1000px;
+    text-align: justify;
 }
 
 .detail-footer {
@@ -664,6 +668,13 @@ body.is-transitioning .transition-overlay {
 }
 
 @media (max-width: 900px) {
+    .detail-nav {
+        padding: 1.5rem;
+    }
+
+    .detail-container {
+        padding: 0 1.5rem;
+    }
 
     .project-item,
     .project-item:nth-child(even) {
@@ -677,22 +688,51 @@ body.is-transitioning .transition-overlay {
     }
 
     .projects-grid {
-        gap: 6rem;
+        gap: 4rem;
     }
 
-    .detail-grid {
-        grid-template-columns: 1fr;
-        gap: 4rem;
+    .detail-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
     }
 }
 
 @media (max-width: 600px) {
+    .detail-nav {
+        padding: 1rem;
+    }
+
+    .detail-container {
+        padding: 0 1rem;
+    }
+
+    .description-text {
+        font-size: 1.05rem;
+        line-height: 1.6;
+    }
+
     .role-container {
         gap: 0.5rem;
     }
 
     .role {
         letter-spacing: 2px;
+        font-size: 1.2rem;
+    }
+
+    .config-tab {
+        padding: 0.8rem 1rem;
+        font-size: 0.75rem;
+    }
+
+    .code-block {
+        padding: 1rem;
+        font-size: 0.8rem;
+    }
+
+    .detail-title {
+        font-size: 3rem;
     }
 }
 
@@ -829,6 +869,8 @@ video.lightbox-media {
 .config-section {
     margin-top: 4rem;
     animation: fadeIn 0.8s ease-out;
+    width: 100%;
+    max-width: 1000px;
 }
 
 .config-container {
@@ -837,6 +879,8 @@ video.lightbox-media {
     border-radius: 8px;
     overflow: hidden;
     backdrop-filter: blur(10px);
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .config-tabs {
@@ -844,6 +888,16 @@ video.lightbox-media {
     background: rgba(10, 10, 10, 0.8);
     border-bottom: 1px solid rgba(111, 232, 198, 0.1);
     overflow-x: auto;
+    width: 100%;
+    scrollbar-width: thin;
+}
+
+.config-tabs::-webkit-scrollbar {
+    height: 4px;
+}
+
+.config-tabs::-webkit-scrollbar-thumb {
+    background: rgba(111, 232, 198, 0.2);
 }
 
 .config-tab {
@@ -894,6 +948,8 @@ video.lightbox-media {
     color: #e0e0e0;
     overflow-x: auto;
     white-space: pre;
+    width: 100%;
+    display: block;
 }
 
 /* YAML Highlighting */
