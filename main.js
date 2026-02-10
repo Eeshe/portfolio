@@ -283,4 +283,110 @@ document.addEventListener('DOMContentLoaded', () => {
     // Load initial tab
     const activeTab = document.querySelector('.config-tab.active');
     if (activeTab) loadConfig(activeTab.dataset.url);
+    // Voucher Scroll System
+    const voucherContainer = document.querySelector('.vouchers-container');
+    const voucherTrack = document.querySelector('.vouchers-track');
+
+    if (voucherContainer && voucherTrack) {
+        // Clone for seamless loop
+        const vouchers = Array.from(voucherTrack.children);
+        vouchers.forEach(voucher => {
+            const clone = voucher.cloneNode(true);
+            voucherTrack.appendChild(clone);
+        });
+
+        let isDown = false;
+        let isPaused = false;
+        const scrollSpeed = 0.3;
+        let currentScroll = 0;
+
+        // Auto-scroll loop
+        const step = () => {
+            if (!isPaused && !isDown) {
+                currentScroll += scrollSpeed;
+
+                const halfWidth = voucherTrack.scrollWidth / 2;
+                if (currentScroll >= halfWidth) {
+                    currentScroll -= halfWidth;
+                } else if (currentScroll <= 0) {
+                    currentScroll += halfWidth;
+                }
+
+                voucherContainer.scrollLeft = currentScroll;
+            } else {
+                // Sync currentScroll when user is manually swiping/scrolling
+                currentScroll = voucherContainer.scrollLeft;
+            }
+            requestAnimationFrame(step);
+        };
+        requestAnimationFrame(step);
+
+        // Hover & Touch Pause
+        voucherContainer.addEventListener('mouseenter', () => isPaused = true);
+        voucherContainer.addEventListener('mouseleave', () => isPaused = false);
+
+        voucherContainer.addEventListener('touchstart', () => {
+            isDown = true;
+            isPaused = true;
+        }, { passive: true });
+
+        voucherContainer.addEventListener('touchend', () => {
+            isDown = false;
+            isPaused = false;
+            currentScroll = voucherContainer.scrollLeft;
+
+            // Re-sync loop
+            const halfWidth = voucherTrack.scrollWidth / 2;
+            if (currentScroll >= halfWidth) {
+                currentScroll -= halfWidth;
+                voucherContainer.scrollLeft = currentScroll;
+            }
+        });
+    }
+
+    // Voucher Modal System
+    window.openVoucherModal = function (btn) {
+        const card = btn.closest('.voucher-card');
+        const textArea = card.querySelector('.voucher-text');
+        const authorArea = card.querySelector('.voucher-author');
+        const relationArea = card.querySelector('.voucher-relation');
+
+        const text = textArea ? textArea.textContent : "";
+        const author = authorArea ? authorArea.textContent : "";
+
+        // Reconstruct the link if the card is an <a> tag
+        let relationHTML = "";
+        if (relationArea) {
+            const projectSpan = relationArea.querySelector('.project-underline');
+            const projectName = projectSpan ? projectSpan.textContent : "";
+            const projectUrl = card.getAttribute('href');
+
+            if (projectUrl && projectUrl !== "#") {
+                relationHTML = `Corresponding to <a href="${projectUrl}" class="project-underline">${projectName}</a>`;
+            } else {
+                relationHTML = relationArea.innerHTML;
+            }
+        }
+
+        let lightbox = document.querySelector('.lightbox');
+        if (!lightbox) {
+            // Re-use standard lightbox setup if not present
+            openLightbox(document.createElement('div')); // Just to initialize it
+            lightbox = document.querySelector('.lightbox');
+        }
+
+        const content = lightbox.querySelector('.lightbox-content');
+        content.innerHTML = `
+            <div class="voucher-modal-content">
+                <p class="voucher-modal-text">${text}</p>
+                <div class="voucher-modal-footer">
+                    <div class="voucher-modal-author">${author}</div>
+                    ${relationHTML ? `<div class="voucher-modal-relation">${relationHTML}</div>` : ''}
+                </div>
+            </div>
+        `;
+
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    };
 });

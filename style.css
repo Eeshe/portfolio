@@ -127,7 +127,7 @@ body.is-transitioning .transition-overlay {
 .projects-section {
     width: 100%;
     max-width: 1600px;
-    padding: 2rem 2rem 8rem 2rem;
+    padding: 2rem 2rem 4rem 2rem;
 }
 
 .section-header {
@@ -772,8 +772,9 @@ body.is-transitioning .transition-overlay {
     width: 100%;
     height: 100%;
     display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: auto;
-    /* Allows scrolling when content is larger */
 }
 
 .lightbox-media {
@@ -1026,6 +1027,248 @@ video.lightbox-media {
     transition: opacity 0.3s ease;
 }
 
-.code-wrapper.expanded .code-overlay {
-    opacity: 0;
+/* Vouchers Section */
+.vouchers-section {
+    width: 100%;
+    padding: 4rem 0 4rem 0;
+    overflow: hidden;
+}
+
+.vouchers-section .section-header {
+    max-width: 1600px;
+    margin: 0 auto 4rem auto;
+    padding: 0 2rem;
+}
+
+.vouchers-container {
+    width: 100%;
+    position: relative;
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+    /* Hide scrollbar Firefox */
+    -ms-overflow-style: none;
+    /* Hide scrollbar IE/Edge */
+    cursor: grab;
+}
+
+.vouchers-container::-webkit-scrollbar {
+    display: none;
+    /* Hide scrollbar Chrome/Safari */
+}
+
+.vouchers-container:active {
+    cursor: grabbing;
+}
+
+.vouchers-track {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem 2rem;
+    width: max-content;
+}
+
+/* Removed animation: scroll 40s linear infinite; */
+
+.vouchers-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-50% - 1rem));
+    }
+}
+
+.voucher-card {
+    flex: 0 0 450px;
+    background: rgba(25, 25, 25, 0.4);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(111, 232, 198, 0.1);
+    border-radius: 12px;
+    padding: 2.5rem;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.voucher-content {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.voucher-card::before {
+    content: '"';
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
+    font-size: 5rem;
+    font-family: serif;
+    color: var(--accent-color);
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.voucher-card:hover {
+    background: rgba(111, 232, 198, 0.05);
+    border-color: rgba(111, 232, 198, 0.3);
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+}
+
+.voucher-card a {
+    position: relative;
+    z-index: 5;
+}
+
+.voucher-text {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+    font-style: italic;
+    opacity: 0.9;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* Removed pointer-events: none to allow text selection if needed, 
+       mask handles the click anyway */
+}
+
+.voucher-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: auto;
+}
+
+.read-more-btn {
+    background: none;
+    border: none;
+    color: var(--accent-color);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    cursor: pointer;
+    padding: 0;
+    text-align: left;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    margin-top: 0.5rem;
+    width: fit-content;
+}
+
+.read-more-btn:hover {
+    color: var(--text-primary);
+}
+
+@keyframes modalEntry {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Voucher Modal Specifics */
+.voucher-modal-content {
+    max-width: 600px;
+    width: 90%;
+    margin: auto;
+    /* Centering within the flex parent */
+    background: #1a1a1a;
+    padding: 3rem;
+    border-radius: 12px;
+    border: 1px solid rgba(111, 232, 198, 0.2);
+    position: relative;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    animation: modalEntry 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.voucher-modal-text {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-primary);
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+.voucher-modal-author {
+    color: var(--accent-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.voucher-modal-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.voucher-modal-relation {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.voucher-author {
+    color: var(--accent-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.voucher-relation {
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.project-underline {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    color: var(--text-primary);
+}
+
+@media (max-width: 600px) {
+    .voucher-card {
+        flex: 0 0 320px;
+        padding: 1.5rem;
+    }
+
+    .voucher-text {
+        font-size: 0.9rem;
+    }
+
+    .voucher-modal-content {
+        padding: 1.5rem 1.2rem;
+    }
+
+    .voucher-modal-text {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
 }
